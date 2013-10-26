@@ -28,7 +28,7 @@ public class HTMLBuilder {
         try {
             Template tableSchema = hadHandlebars.compile("table");
 //            System.out.println(tableSchema.apply(practices));
-            FileWriter writer = new FileWriter(printFile, true);
+            FileWriter writer = new FileWriter(printFile, false);
             writer.write(tableSchema.apply(practices));
             writer.flush();
         } catch (IOException e) {
