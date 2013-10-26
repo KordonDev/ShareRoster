@@ -9,3 +9,6 @@
 *.iml
 *.xml
 !pom.xml
+
+*.html
+target/*

@@ -24,62 +24,62 @@ public class PracticeTest {
 
     @Test
     public void testMeetingPlace() throws Exception {
-        assertThat(testObject.meetingPlace(), is(meetingPlace));
+        assertThat(testObject.getMeetingPlace(), is(meetingPlace));
     }
 
     @Test
     public void testSubject() throws Exception {
-        assertThat(testObject.subject(),is(subject));
+        assertThat(testObject.getSubject(),is(subject));
     }
 
     @Test
     public void testDate() throws Exception {
-        assertThat(testObject.date(),is(date));
+        assertThat(testObject.getDate(),is(date));
     }
 
     @Test
     public void testStartTime() throws Exception {
-        assertThat(testObject.startTime(),is(startTime));
+        assertThat(testObject.getStartTime(),is(startTime));
     }
 
     @Test
     public void testDayOfWeekIsMonday() throws Exception {
-        assertThat(testObject.dayOfWeek(),is(WeekDay.Montag));
+        assertThat(testObject.getDayOfWeek(),is(WeekDay.Montag));
     }
 
     @Test
     public void testDayOfWeekIsDienstag() throws Exception {
         Practice dienstagTestObject = new Practice("2013-10-15T19:00:00+02:00","","");
-        assertThat(dienstagTestObject.dayOfWeek(),is(WeekDay.Dienstag));
+        assertThat(dienstagTestObject.getDayOfWeek().name(),is("Dienstag"));
     }
 
     @Test
     public void testDayOfWeekIsMittwoch() throws Exception {
         Practice mittwochTestObject = new Practice("2015-05-20T19:00:00+02:00","","");
-        assertThat(mittwochTestObject.dayOfWeek(),is(WeekDay.Mittwoch));
+        assertThat(mittwochTestObject.getDayOfWeek(),is(WeekDay.Mittwoch));
     }
 
     @Test
     public void testDayOfWeekIsDonnerstag() throws Exception {
         Practice donnerstagTestObject = new Practice("2013-12-05T19:00:00+02:00","","");
-        assertThat(donnerstagTestObject.dayOfWeek(),is(WeekDay.Donnerstag));
+        assertThat(donnerstagTestObject.getDayOfWeek(),is(WeekDay.Donnerstag));
     }
 
     @Test
     public void testDayOfWeekIsFreitag() throws Exception {
         Practice freitagTestObject = new Practice("2008-02-29T19:00:00+02:00","","");
-        assertThat(freitagTestObject.dayOfWeek(),is(WeekDay.Freitag));
+        assertThat(freitagTestObject.getDayOfWeek(),is(WeekDay.Freitag));
     }
 
     @Test
     public void testDayOfWeekIsSamstag() throws Exception {
         Practice samstagTestObject = new Practice("2020-06-20T19:00:00+02:00","","");
-        assertThat(samstagTestObject.dayOfWeek(),is(WeekDay.Samstag));
+        assertThat(samstagTestObject.getDayOfWeek(),is(WeekDay.Samstag));
     }
 
     @Test
     public void testDayOfWeekIsSonntag() throws Exception {
         Practice sonntagTestObject = new Practice("2013-10-20T19:00:00+02:00","","");
-        assertThat(sonntagTestObject.dayOfWeek(),is(WeekDay.Sonntag));
+        assertThat(sonntagTestObject.getDayOfWeek(),is(WeekDay.Sonntag));
     }
 }

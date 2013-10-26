@@ -24,12 +24,12 @@ public class XMLParser {
         this.filename = filename;
     }
 
-    public Iterable<Practice> parseXML() {
+    public List<Practice> parseXML() {
         Document document = readXMLToDocument();
         return practicesListFromDocument(document);
     }
 
-    private Iterable<Practice> practicesListFromDocument(Document XMLDocument) {
+    private List<Practice> practicesListFromDocument(Document XMLDocument) {
         Element docElement = XMLDocument.getDocumentElement();
         NodeList nodeList = docElement.getElementsByTagName("RosterEntry");
         List<Practice> result = new ArrayList<Practice>();

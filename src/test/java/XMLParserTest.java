@@ -40,15 +40,15 @@ public class XMLParserTest {
     @Test
     public void correctMeetingPlaceOfPractices() {
         Iterator<Practice> it = testResult.iterator();
-        assertThat(it.next().meetingPlace(), is("GH"));
-        assertThat(it.next().meetingPlace(), is("GH"));
+        assertThat(it.next().getMeetingPlace(), is("GH"));
+        assertThat(it.next().getMeetingPlace(), is("GH"));
     }
 
     @Test
     public void correctSubjectOfPractices() {
         Iterator<Practice> it = testResult.iterator();
-        assertThat(it.next().subject(), is("1. Übung 2. Halbjahr"));
-        assertThat(it.next().subject(), is("Löschangriff"));
+        assertThat(it.next().getSubject(), is("1. Übung 2. Halbjahr"));
+        assertThat(it.next().getSubject(), is("Löschangriff"));
     }
 
     private void createTestXML() throws IOException {

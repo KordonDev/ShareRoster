@@ -41,24 +41,24 @@ public class Practice {
     }
 
 
-    public String meetingPlace() {
+    public String getMeetingPlace() {
         return place;
     }
 
-    public String subject() {
+    public String getSubject() {
         return subject;
     }
 
-    public String date() {
+    public String getDate() {
         return new String(stringOfTwoNumbers(date.getDayOfMonth())+ "."+ stringOfTwoNumbers(date.getMonthOfYear())+"."+
                 stringOfTwoNumbers(date.getYear()));
     }
 
-    public WeekDay dayOfWeek() {
+    public WeekDay getDayOfWeek() {
         return dayOfWeek;
     }
 
-    public String startTime() {
+    public String getStartTime() {
         return new String(stringOfTwoNumbers(startTime.getHourOfDay())+":"+
                 stringOfTwoNumbers(startTime.getMinuteOfHour()));
     }
