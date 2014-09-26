@@ -12,3 +12,5 @@
 
 *.html
 target/*
+
+!lib/**

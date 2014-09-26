@@ -8,9 +8,9 @@ import java.util.List;
 public class main {
 
     public static void main(String[] args) {
-        XMLParser xmlMontag = new XMLParser("Montag2213.xml");
+        XMLParser xmlMontag = new XMLParser("Montag.xml");
         List<Practice> practices = xmlMontag.parseXML();
-        HTMLBuilder table = new HTMLBuilder("montag2013.html");
+        HTMLBuilder table = new HTMLBuilder("montag2014.html");
         table.createHTMLTableFromPractice(practices);
     }
 
