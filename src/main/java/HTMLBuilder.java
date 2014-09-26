@@ -1,9 +1,6 @@
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Template;
-import org.w3c.dom.html.HTMLElement;
-import org.w3c.dom.html.HTMLTableElement;
 
-import javax.swing.text.html.HTML;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -22,18 +19,13 @@ public class HTMLBuilder {
         printFile = new File(filename);
     }
 
-    public void createHTMLTableFromPractice(List<Practice> practices) throws RuntimeException{
+    public void createHTMLTableFromPractice(List<Practice> practices) throws IOException {
         Handlebars hadHandlebars = new Handlebars();
 
-        try {
-            Template tableSchema = hadHandlebars.compile("table");
-//            System.out.println(tableSchema.apply(practices));
-            FileWriter writer = new FileWriter(printFile, false);
-            writer.write(tableSchema.apply(practices));
-            writer.flush();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Template tableSchema = hadHandlebars.compile("table");
+        FileWriter writer = new FileWriter(printFile, false);
+        writer.write(tableSchema.apply(practices));
+        writer.flush();
     }
 
 }
