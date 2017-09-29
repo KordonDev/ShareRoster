@@ -10,4 +10,4 @@ Creates from an XML File a HTML Files and puts them to different homepages
 `mvn package`
 
 # Run
-`java -cp ShareRoster-1.0-SNAPSHOT.jar main`
+`./run $filename`
