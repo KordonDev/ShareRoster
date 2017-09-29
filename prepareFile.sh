@@ -1,5 +1,5 @@
 #!/bin/sh
 
-sed -i 's/<MeetingPlace\/>/<MeetingPlace> <\/MeetingPlace>' $1
-sed -i 's/<ResponsiblePerson\/>/<ResponsiblePerson> <\/MeetingPlace>' $1
-sed -i 's/<Subject\/>/<Subject> <\/MeetingPlace>' $1
+sed -i.bak 's/<MeetingPlace\/>/<MeetingPlace> <\/MeetingPlace>/g' $1
+sed -i.bak 's/<ResponsiblePerson\/>/<ResponsiblePerson> <\/ResponsiblePerson>/g' $1
+sed -i.bak 's/<Subject\/>/<Subject> <\/Subject>/g' $1
