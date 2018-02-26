@@ -11,3 +11,6 @@ Creates from an XML File a HTML Files and puts them to different homepages
 
 # Run
 `./run $filename`
+
+
+`npm install xml2json`
